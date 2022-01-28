@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  color: #111517;
+}
+
+#root {
+  background: #fafafa;
+}
+
+:root {
+  --text-color: #111517;
+  --input-element: #858585;
+  --ui-background: #fafafa;
+  --ui-element: #ffffff;
+}
+
+@import "./HOC/header.scss";
+
+@import "./pages/home.scss";
+@import "./pages/profile.scss";
+
+@import "./typography/textBody.scss";
+
+@import "./uiElement/button.scss";
+@import "./uiElement/card.scss";
+@import "./uiElement/filter.scss";
+@import "./uiElement/search.scss";

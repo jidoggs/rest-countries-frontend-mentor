@@ -1,0 +1,22 @@
+main {
+  padding: 3rem 5rem;
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  gap: 3rem;
+
+  form {
+    grid-column: 1/2;
+  }
+  select {
+    grid-column: 3/4;
+  }
+  .countries {
+    grid-column: 1/-1;
+  }
+}
+
+.countries {
+  display: grid;
+  grid-template-columns: repeat(4, 3.52fr);
+  gap: 5vw;
+}

@@ -1,0 +1,39 @@
+.card {
+  box-shadow: 0px 4px 10px 0px #0000000a;
+  background-color: var(--ui-element);
+  border-radius: 4px;
+
+  display: grid;
+  grid-template-columns: 1.5rem 1fr 1.5rem;
+  grid-template-rows: 10rem 1.5rem max-content 1rem max-content 0.25rem max-content 0.25rem max-content 2.75rem;
+
+  &__flag {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    border-radius: 4px 4px 0px 0px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__country {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  &__sub {
+    &-pop,
+    &-reg,
+    &-cap {
+      grid-column: 2/3;
+    }
+
+    &-pop {
+      grid-row: 5/6;
+    }
+    &-reg {
+      grid-row: 7/8;
+    }
+    &-cap {
+      grid-row: 9/10;
+    }
+  }
+}
