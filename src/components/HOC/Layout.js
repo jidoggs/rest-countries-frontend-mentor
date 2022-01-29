@@ -11,15 +11,17 @@ function Layout(props) {
   }, [theme]);
 
   return (
-    <section>
+    <section className="app">
       <header className="header">
-        <h1>Where in the world?</h1>
-        <CustomBtn
-          name="Dark Mode"
-          theme={theme}
-          setTheme={setTheme}
-          icon={<MoonOutline />}
-        />
+        <nav>
+          <h2>Where in the world?</h2>
+          <CustomBtn
+            name="Dark Mode"
+            theme={theme}
+            setTheme={setTheme}
+            icon={<MoonOutline />}
+          />
+        </nav>
       </header>
       {props.children}
     </section>

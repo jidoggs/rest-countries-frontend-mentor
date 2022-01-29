@@ -9,7 +9,7 @@ function Home() {
   const [regionFilter, setRegionFilter] = useState("Filter by Region");
 
   return (
-    <main>
+    <main className="home">
       <Search value={inputFilter} setValue={setInputFilter} />
       <Select selectValue={regionFilter} changeSelectValue={setRegionFilter} />
       <FilterContext.Provider value={inputFilter}>

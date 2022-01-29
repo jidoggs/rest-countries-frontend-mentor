@@ -1,5 +1,7 @@
-main {
-  padding: 3rem 5rem;
+.home {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  padding: 3rem 0;
   display: grid;
   grid-template-columns: max-content 1fr max-content;
   gap: 3rem;
@@ -18,7 +20,8 @@ main {
 .countries {
   display: grid;
   grid-template-columns: repeat(4, 3.52fr);
-  gap: 5vw;
+  grid-auto-rows: 336px;
+  gap: 3vw;
 }
 
 .resultNotFound {
