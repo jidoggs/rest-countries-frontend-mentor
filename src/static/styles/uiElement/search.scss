@@ -1,0 +1,35 @@
+.search {
+  &__form {
+    position: relative;
+    box-shadow: 0px 4px 10px 0px #0000000a;
+
+    .icon__search {
+      position: absolute;
+      inset: 18px auto 18px 32px;
+      width: 18px;
+      height: 18px;
+
+      path {
+        stroke: var(--input-element);
+      }
+    }
+  }
+  &__input {
+    width: 33.333vw;
+    padding: 18px 24px;
+    padding-left: 74px;
+    border: none;
+    border-radius: 4px;
+
+    &::placeholder {
+      color: var(--input-element);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 19px;
+      letter-spacing: -0.02em;
+    }
+    &:focus {
+      outline: 1px solid var(--text-color);
+    }
+  }
+}
