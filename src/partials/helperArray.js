@@ -1,1 +1,8 @@
-export const regions = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
+export const regions = [
+  "Filter by Region",
+  "Africa",
+  "Americas",
+  "Asia",
+  "Europe",
+  "Oceania",
+];

@@ -6,7 +6,13 @@ function FetchData({ region }) {
   const [result, setResult] = useState([]);
   useEffect(() => {
     axios
-      .get(`https://restcountries.com/v3.1/region/${region}`)
+      .get(
+        `${
+          region === "Filter by Region"
+            ? "https://restcountries.com/v3.1/all"
+            : `https://restcountries.com/v3.1/region/${region}`
+        }`
+      )
       .then((res) => setResult(res.data))
       .catch((error) => console.warn(error));
   }, [region]);

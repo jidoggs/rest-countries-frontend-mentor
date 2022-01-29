@@ -6,7 +6,7 @@ import Select from "../UIComponents/Select";
 export const FilterContext = createContext(null);
 function Home() {
   const [inputFilter, setInputFilter] = useState("");
-  const [regionFilter, setRegionFilter] = useState("asia");
+  const [regionFilter, setRegionFilter] = useState("Filter by Region");
 
   return (
     <main>
