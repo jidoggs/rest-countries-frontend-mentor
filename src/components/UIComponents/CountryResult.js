@@ -26,7 +26,7 @@ function CountryResult({ result }) {
           linkTo={name.common}
           flag={flags.svg}
           countryName={name.common.length < 22 ? name.common : altSpellings[0]}
-          population={population}
+          population={new Intl.NumberFormat("us-US").format(population)}
           region={region}
           capital={capitol}
         />
