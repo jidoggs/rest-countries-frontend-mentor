@@ -34,7 +34,11 @@ function CountryResult({ result }) {
     });
 
   return (
-    <section className="countries">
+    <section
+      className={`countries ${
+        cards.length <= 4 && cards.length !== 0 ? "resultNotFound" : ""
+      }`}
+    >
       {cards.length > 0 ? cards : <ResultNotFound />}
     </section>
   );
