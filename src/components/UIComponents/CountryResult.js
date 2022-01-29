@@ -29,15 +29,15 @@ function CountryResult({ result }) {
           population={new Intl.NumberFormat("us-US").format(population)}
           region={region}
           capital={capitol}
+          wholeElement={el}
         />
       );
     });
+  console.log(cards);
 
   return (
     <section
-      className={`countries ${
-        cards.length <= 4 && cards.length !== 0 ? "resultNotFound" : ""
-      }`}
+      className={`countries ${cards.length <= 4 ? "resultNotFound" : ""}`}
     >
       {cards.length > 0 ? cards : <ResultNotFound />}
     </section>

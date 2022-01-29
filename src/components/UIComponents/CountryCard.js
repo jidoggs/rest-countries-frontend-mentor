@@ -8,15 +8,16 @@ function CountryCard({
   region,
   capital,
   linkTo,
+  wholeElement,
 }) {
   return (
-    <Link to={`/${linkTo}`}>
+    <Link to={`/${linkTo}`} state={wholeElement}>
       <div className="card">
         <div
           className="card__flag"
           style={{ backgroundImage: `url(${flag})` }}
         ></div>
-        <h2 className="card__country"> {countryName}</h2>
+        <h3 className="card__country"> {countryName}</h3>
         <p className="card__sub-pop">
           Population:
           <span className="card__sub--result"> {population}</span>
