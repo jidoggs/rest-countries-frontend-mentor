@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Nunito Sans", sans-serif;
-  color: #111517;
+  color: var(--text-color);
 }
 
 html,
@@ -12,11 +12,19 @@ body {
   height: 100%;
 }
 
-#root {
-  background: #fafafa;
+section {
+  background: var(--ui-background);
 }
 
-:root {
+html {
+  transition: all 10s;
+  --text-color: #ffffff;
+  --input-element: #ffffff;
+  --ui-background: #202c37;
+  --ui-element: #2b3945;
+}
+
+html[data-theme="light"] {
   --text-color: #111517;
   --input-element: #858585;
   --ui-background: #fafafa;

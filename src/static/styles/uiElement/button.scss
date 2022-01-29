@@ -1,0 +1,13 @@
+button {
+  background-color: transparent;
+  border: none;
+  position: relative;
+  cursor: pointer;
+
+  .icon__moon {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    left: -2rem;
+  }
+}
