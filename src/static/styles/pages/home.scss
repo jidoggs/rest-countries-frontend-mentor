@@ -4,10 +4,10 @@ main {
   grid-template-columns: max-content 1fr max-content;
   gap: 3rem;
 
-  form {
+  .search__form {
     grid-column: 1/2;
   }
-  select {
+  .select__form {
     grid-column: 3/4;
   }
   .countries {
@@ -19,4 +19,8 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 3.52fr);
   gap: 5vw;
+}
+
+.resultNotFound {
+  height: calc(100vh - 278px);
 }
