@@ -27,7 +27,7 @@ function FetchData({ region, setResult }) {
           isloading: false,
         }))
       );
-  }, [region]);
+  }, [region, setResult]);
 
   return <CountryResult />;
 }
