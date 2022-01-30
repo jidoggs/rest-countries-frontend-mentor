@@ -1,18 +1,13 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import CountryResult from "../UIComponents/CountryResult";
 
-function FetchData({ region }) {
-  const [result, setResult] = useState({
-    data: [],
-    isloading: true,
-    isError: null,
-  });
+function FetchData({ region, setResult }) {
   useEffect(() => {
     axios
       .get(
         `${
-          region === "Filter by Region"
+          region === "filter by region"
             ? "https://restcountries.com/v3.1/all"
             : `https://restcountries.com/v3.1/region/${region}`
         }`
@@ -34,7 +29,7 @@ function FetchData({ region }) {
       );
   }, [region]);
 
-  return <CountryResult result={result} />;
+  return <CountryResult />;
 }
 
 export default FetchData;

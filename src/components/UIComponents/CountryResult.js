@@ -7,8 +7,8 @@ import { FilterContext } from "../Pages/Home";
 import CountryCard from "./CountryCard";
 import ResultNotFound from "./ResultNotFound";
 
-function CountryResult({ result }) {
-  const inputFilter = useContext(FilterContext);
+function CountryResult() {
+  const [inputFilter, result] = useContext(FilterContext);
 
   const cards = result.data
     .filter((itm) =>

@@ -14,10 +14,7 @@ function Select({ selectValue, changeSelectValue }) {
   return (
     <form className="select__form">
       <DropDownIcon />
-      <select
-        value={selectValue}
-        onChange={(e) => changeSelectValue(e.target.value)}
-      >
+      <select value={selectValue} onChange={(e) => changeSelectValue(e)}>
         {selectOptions}
       </select>
     </form>

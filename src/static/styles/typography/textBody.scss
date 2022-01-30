@@ -38,13 +38,32 @@ a {
   color: inherit;
 }
 
+button,
+h1,
+h2,
+h3,
+p,
+a {
+  color: var(--text-color);
+}
+
 .isLoading {
   grid-column: 1/-1;
   font-size: 1.5rem;
   justify-self: center;
   align-self: center;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__text,
   &__icon {
+    color: var(--input-element);
+  }
+
+  &__icon {
+    width: 4rem;
     animation: rotate360 5s infinite;
   }
 }
