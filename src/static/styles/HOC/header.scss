@@ -1,6 +1,27 @@
 .app {
   display: grid;
   grid-template-columns: 1fr 9fr 1fr;
+  @media screen and (max-width: 78.125em) {
+    grid-template-columns: 1fr 14fr 1fr;
+  }
+  @media screen and (max-width: 72.625em) {
+    grid-template-columns: 1fr 15fr 1fr;
+  }
+  @media screen and (max-width: 72em) {
+    grid-template-columns: 1fr 20fr 1fr;
+  }
+  @media screen and (max-width: 69.75em) {
+    grid-template-columns: 1fr 9fr 1fr;
+  }
+  @media screen and (max-width: 58.625em) {
+    grid-template-columns: 1fr 20fr 1fr;
+  }
+  @media screen and (max-width: 33.75em) {
+    grid-template-columns: 1fr 15fr 1fr;
+  }
+  @media screen and (max-width: 29.0625em) {
+    grid-template-columns: 1fr 21fr 1fr;
+  }
 }
 
 .header {

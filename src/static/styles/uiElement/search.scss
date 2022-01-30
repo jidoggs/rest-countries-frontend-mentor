@@ -5,9 +5,9 @@
 
     .icon__search {
       position: absolute;
-      inset: 18px auto 18px 32px;
-      width: 18px;
-      height: 18px;
+      inset: 1.125rem auto 1.125rem 2rem;
+      width: 1.125rem;
+      height: 1.125rem;
 
       path {
         stroke: var(--input-element);
@@ -16,18 +16,24 @@
   }
   &__input {
     width: 33.333vw;
-    padding: 18px 24px;
-    padding-left: 74px;
+    padding: 1.125rem 1.5rem;
+    padding-left: 4.625rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.25em;
     background-color: var(--ui-element);
     color: var(--text-color);
+    @media screen and (max-width: 51.25em) {
+      width: 52vw;
+    }
+    @media screen and (max-width: 33.75em) {
+      width: 100%;
+    }
 
     &::placeholder {
       color: var(--input-element);
-      font-size: 14px;
+      font-size: 0.875rem;
       font-weight: 600;
-      line-height: 19px;
+      line-height: 1.1875rem;
       letter-spacing: -0.02em;
     }
     &:focus {

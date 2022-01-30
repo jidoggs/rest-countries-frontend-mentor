@@ -20,6 +20,7 @@ function Layout(props) {
         <nav>
           <h2>Where in the world?</h2>
           <CustomBtn
+            className="header__btn"
             name="Dark Mode"
             theme={theme}
             setTheme={setTheme}
