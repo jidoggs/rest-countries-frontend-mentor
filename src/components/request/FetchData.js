@@ -3,7 +3,11 @@ import React, { useEffect, useState } from "react";
 import CountryResult from "../UIComponents/CountryResult";
 
 function FetchData({ region }) {
-  const [result, setResult] = useState([]);
+  const [result, setResult] = useState({
+    data: [],
+    isloading: true,
+    isError: null,
+  });
   useEffect(() => {
     axios
       .get(
@@ -13,8 +17,21 @@ function FetchData({ region }) {
             : `https://restcountries.com/v3.1/region/${region}`
         }`
       )
-      .then((res) => setResult(res.data))
-      .catch((error) => console.warn(error));
+      .then((res) =>
+        setResult((prev) => ({
+          ...prev,
+          data: res.data,
+          isloading: false,
+          isError: null,
+        }))
+      )
+      .catch((error) =>
+        setResult((prev) => ({
+          ...prev,
+          isError: error,
+          isloading: false,
+        }))
+      );
   }, [region]);
 
   return <CountryResult result={result} />;

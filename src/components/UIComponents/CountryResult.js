@@ -1,4 +1,8 @@
 import React, { useContext } from "react";
+import {
+  checkYourNetwork,
+  dataIsLoading,
+} from "../../partials/helperFunctions";
 import { FilterContext } from "../Pages/Home";
 import CountryCard from "./CountryCard";
 import ResultNotFound from "./ResultNotFound";
@@ -6,7 +10,7 @@ import ResultNotFound from "./ResultNotFound";
 function CountryResult({ result }) {
   const inputFilter = useContext(FilterContext);
 
-  const cards = result
+  const cards = result.data
     .filter((itm) =>
       itm?.name?.common?.toLowerCase().includes(inputFilter.toLowerCase())
     )
@@ -33,13 +37,17 @@ function CountryResult({ result }) {
         />
       );
     });
-  console.log(cards);
 
   return (
     <section
       className={`countries ${cards.length <= 4 ? "resultNotFound" : ""}`}
     >
-      {cards.length > 0 ? cards : <ResultNotFound />}
+      {result.isError?.message === "Network Error" && checkYourNetwork()}
+      {result.isloading && dataIsLoading()}
+      {cards.length > 0
+        ? cards
+        : result.isloading === false &&
+          result.isError === null && <ResultNotFound />}
     </section>
   );
 }

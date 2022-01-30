@@ -1,3 +1,4 @@
+import IsLoadingIcon from "../static/images/IsLoading";
 export const displayAll = (obj) => {
   const result = [];
 
@@ -36,3 +37,18 @@ export const displayOne = (obj) => {
 
   return result[Math.floor(Math.random() * result.length)];
 };
+
+export const dataIsLoading = () => {
+  return (
+    <div className="isLoading">
+      <h1 className="isLoading__text">loading...</h1>
+      <IsLoadingIcon className="isLoading__icon" />
+    </div>
+  );
+};
+
+export const checkYourNetwork = () => (
+  <h1 className="isNetworkError">
+    Please Check your internet Connection and then refresh this page
+  </h1>
+);
