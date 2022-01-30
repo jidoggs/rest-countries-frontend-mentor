@@ -3,6 +3,7 @@ import React from "react";
 function CustomBtn({ style, className, name, icon, theme, setTheme }) {
   const changeTheme = () => {
     setTheme(!theme);
+    localStorage.setItem("isDark", !theme);
   };
 
   return (

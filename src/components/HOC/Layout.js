@@ -3,11 +3,15 @@ import MoonOutline from "../../static/images/MoonIcon";
 import CustomBtn from "../UIComponents/CustomBtn";
 
 function Layout(props) {
-  const [theme, setTheme] = useState(true);
+  const initialState = !localStorage.getItem("isDark")
+    ? true
+    : JSON.parse(localStorage.getItem("isDark"));
+  const [theme, setTheme] = useState(initialState);
+
   useEffect(() => {
-    theme === false
-      ? document.documentElement.setAttribute("data-theme", "dark")
-      : document.documentElement.setAttribute("data-theme", "light");
+    theme
+      ? document.documentElement.setAttribute("data-theme", "light")
+      : document.documentElement.removeAttribute("data-theme", "light");
   }, [theme]);
 
   return (
