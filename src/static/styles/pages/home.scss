@@ -50,6 +50,7 @@
 }
 
 .resultNotFound {
-  height: calc(100vh - 278px);
+  // height: calc(100vh - 278px);
+  height: fit-content;
   color: var(--text-color);
 }
