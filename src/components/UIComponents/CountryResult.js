@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import {
   checkYourNetwork,
   dataIsLoading,
+  imgInfo,
 } from "../../partials/helperFunctions";
 import { FilterContext } from "../Pages/Home";
 import CountryCard from "./CountryCard";
@@ -27,8 +28,8 @@ function CountryResult() {
       return (
         <CountryCard
           key={id}
-          linkTo={name.common}
-          flag={flags.svg}
+          linkTo={name.common.replace(/\s/g, "")}
+          flag={flags.png}
           countryName={name.common.length < 22 ? name.common : altSpellings[0]}
           population={new Intl.NumberFormat("us-US").format(population)}
           region={region}
