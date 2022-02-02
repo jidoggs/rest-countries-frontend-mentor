@@ -3,13 +3,15 @@
   grid-column: 2/3;
 
   display: grid;
-  // grid-template-rows: 4rem max-content 4rem 25rem calc(100vh - 34.125rem);
-  grid-template-rows: 4rem max-content 3.6rem 25rem calc(100vh - 39.8rem);
-  grid-template-columns: 4.667fr 1fr 5fr;
+  grid-template-rows: 1fr [btn-start]max-content[btn-end] 1fr [flag-start].5fr [info-start] 4.025fr [info-end ] .5fr[flag-end] 33.49609375vh;
+  grid-template-columns: 3.889fr 1fr 4fr;
 
+  @media screen and (max-width: 46.875em) {
+    grid-template-rows: 82px [btn-start]max-content[btn-end] 126px [flag-start] 460px [flag-end] 88px [info-start] max-content [info-end ] 123px;
+  }
   &__back-btn {
     grid-column: 1/2;
-    grid-row: 2/3;
+    grid-row: btn-start/btn-end;
     justify-self: flex-start;
     background-color: var(--ui-element);
     padding: 0.25rem 2.5rem 0.25rem 2rem;
@@ -32,45 +34,119 @@
 
   &__flag {
     grid-column: 1/2;
-    grid-row: 4/5;
+    grid-row: flag-start/flag-end;
 
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
+    @media screen and (max-width: 69.75em) {
+      background-size: unset;
+      background-position: center;
+    }
+    @media screen and (max-width: 48em) {
+      background-position: top;
+    }
+    @media screen and (max-width: 46.875em) {
+      grid-column: 1/-1;
+      background-size: 100% 100%;
+    }
   }
   &__info {
     grid-column: 3/4;
-    grid-row: 4/5;
+    grid-row: info-start/info-end;
 
     display: grid;
     grid-template-columns: 3.5fr 1fr 3.5fr;
+    grid-template-rows: [headline-start]max-content[headline-stop] 29px [main-start]max-content[main-stop] 73px [share-start]max-content[share-stop];
+
+    @media screen and (max-width: 69.75em) {
+      grid-template-rows: [headline-start]max-content[headline-stop] 29px [main-start]max-content[main-stop] 39px [share-start]max-content[share-stop];
+    }
+    @media screen and (max-width: 48em) {
+      grid-template-rows: [headline-start]max-content[headline-stop] 51px [main-start]max-content[main-stop] 50px[start-main]max-content[stop-main] 72px [share-start]max-content[share-stop];
+    }
+    @media screen and (max-width: 46.875em) {
+      grid-column: 1/-1;
+    }
+    h1 {
+      grid-row: headline-start/headline-stop;
+      grid-column: 1/2;
+      margin-bottom: 0;
+    }
 
     &--left {
       grid-column: 1/2;
+      grid-row: main-start/main-stop;
+      @media screen and (max-width: 48em) {
+        grid-column: 1/-1;
+      }
     }
     &--right {
       grid-column: 3/4;
+      grid-row: main-start/main-stop;
+      @media screen and (max-width: 48em) {
+        grid-column: 1/-1;
+        grid-row: start-main/stop-main;
+      }
     }
   }
   &__sub {
     margin-bottom: 10px;
   }
+
   &__border {
     grid-column: 1/-1;
+    grid-row: share-start/share-end;
     display: grid;
     grid-template-columns: max-content 1rem max-content;
+    align-items: center;
+    @media screen and (max-width: 48em) {
+      gap: 34px;
+    }
+    @media screen and (max-width: 46.875em) {
+      align-items: unset;
+    }
 
     & > span {
       &:first-child {
         grid-column: 1/2;
+        @media screen and (max-width: 69.75em) {
+          grid-column: 1/-1;
+        }
+        @media screen and (max-width: 48em) {
+          grid-column: 1/-1;
+        }
+        @media screen and (max-width: 46.875em) {
+          grid-column: 1/2;
+        }
+        @media screen and (max-width: 32.25em) {
+          grid-column: 1/-1;
+        }
       }
       &:last-child {
         grid-column: 3/4;
         align-self: baseline;
-        // overflow: hidden;
         display: grid;
-        grid-template-columns: repeat(4, auto);
-        gap: 1rem;
-        // row-gap: 0.5rem;
+        grid-template-columns: repeat(4, 96px);
+        text-align: center;
+        gap: 0.625em;
+
+        @media screen and (max-width: 83.25em) {
+          grid-template-columns: repeat(3, 96px);
+        }
+        @media screen and (max-width: 69.75em) {
+          grid-column: 1/-1;
+        }
+        @media screen and (max-width: 46.875em) {
+          grid-column: 2/3;
+        }
+        @media screen and (max-width: 32.25em) {
+          grid-template-columns: repeat(4, 96px);
+          grid-column: 1/-1;
+        }
+        @media screen and (max-width: 29.375em) {
+          grid-template-columns: repeat(3, 96px);
+          grid-column: 1/-1;
+        }
       }
     }
   }
