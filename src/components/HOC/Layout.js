@@ -18,7 +18,7 @@ function Layout(props) {
     <section className="app">
       <header className="header">
         <nav>
-          <h2>Where in the world?</h2>
+          <h1>Where in the world?</h1>
           <CustomBtn
             className="header__btn"
             name="Dark Mode"

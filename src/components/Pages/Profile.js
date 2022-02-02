@@ -68,7 +68,7 @@ function Profile() {
         style={{ backgroundImage: `url(${flags.png})` }}
       ></div>
       <section className="profile__info">
-        <h1 className="profile__name">{name.common}</h1>
+        <h2 className="profile__name">{name.common}</h2>
         <div className="profile__info--left">
           <p className="profile__sub">
             Native Name:
