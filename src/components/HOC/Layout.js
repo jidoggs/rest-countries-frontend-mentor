@@ -15,7 +15,7 @@ function Layout(props) {
   }, [theme]);
 
   return (
-    <section className="app">
+    <div className="app">
       <header className="header">
         <nav>
           <h1>Where in the world?</h1>
@@ -29,7 +29,7 @@ function Layout(props) {
         </nav>
       </header>
       {props.children}
-    </section>
+    </div>
   );
 }
 

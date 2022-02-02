@@ -40,16 +40,14 @@ function CountryResult() {
     });
 
   return (
-    <section
-      className={`countries ${cards.length <= 4 ? "resultNotFound" : ""}`}
-    >
+    <div className={`countries ${cards.length <= 4 ? "resultNotFound" : ""}`}>
       {result.isError?.message === "Network Error" && checkYourNetwork()}
       {result.isloading && dataIsLoading()}
       {cards.length > 0
         ? cards
         : result.isloading === false &&
           result.isError === null && <ResultNotFound />}
-    </section>
+    </div>
   );
 }
 
