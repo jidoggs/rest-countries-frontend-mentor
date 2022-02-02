@@ -43,8 +43,9 @@ function Profile() {
         to={`/${itm.name.common}`}
         state={itm}
         onClick={() => setBorderCountries([])}
+        className="profile__border--link"
       >
-        <span className="profile__border--link">{itm.name.common}</span>
+        {itm.name.common}
       </Link>
     );
   });
@@ -64,7 +65,7 @@ function Profile() {
       </button>
       <div
         className="profile__flag"
-        style={{ backgroundImage: `url(${flags.svg})` }}
+        style={{ backgroundImage: `url(${flags.png})` }}
       ></div>
       <section className="profile__info">
         <h1 className="profile__name">{name.common}</h1>

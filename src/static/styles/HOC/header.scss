@@ -1,6 +1,6 @@
 .app {
   display: grid;
-  grid-template-columns: 1fr 9fr 1fr;
+  grid-template-columns: 1fr 16fr 1fr;
   @media screen and (max-width: 78.125em) {
     grid-template-columns: 1fr 14fr 1fr;
   }

@@ -9,9 +9,11 @@
 html,
 body {
   height: 100%;
+}
+body,
+.app {
   background: var(--ui-background);
 }
-
 html {
   transition: all 10s;
   --text-color: #ffffff;

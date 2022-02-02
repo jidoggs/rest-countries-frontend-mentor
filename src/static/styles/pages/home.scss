@@ -30,7 +30,8 @@
   display: grid;
   grid-template-columns: repeat(4, 3.52fr);
   grid-auto-rows: 336px;
-  gap: 3vw;
+  column-gap: 5.859375%;
+  row-gap: 5.2vw;
 
   @media screen and (max-width: 81.375em) {
     gap: 2vw;
