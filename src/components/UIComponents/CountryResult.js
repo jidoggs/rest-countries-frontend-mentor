@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import {
   checkYourNetwork,
   dataIsLoading,
-  imgInfo,
 } from "../../partials/helperFunctions";
 import { FilterContext } from "../Pages/Home";
 import CountryCard from "./CountryCard";
